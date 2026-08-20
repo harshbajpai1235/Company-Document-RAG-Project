@@ -1,6 +1,6 @@
-# Company Document RAG Project
+# Document RAG QA
 
-A local Retrieval-Augmented Generation (RAG) pipeline for question answering over company PDFs. Documents are chunked, embedded, and stored in a FAISS index. At query time the system retrieves the most relevant chunks and answers with Gemini, citing source chunk IDs.
+A local Retrieval-Augmented Generation (RAG) pipeline for question answering over PDFs. Documents are chunked, embedded, and stored in a FAISS index. At query time the system retrieves the most relevant chunks and answers with Gemini, citing source chunk IDs.
 
 The CLI also prints a **baseline** (no retrieved context) answer next to the **RAG** answer so you can see what grounding the documents adds.
 
@@ -112,7 +112,7 @@ To print retrieved chunk previews while querying, set `SHOW_SOURCES_TEXT = True`
 
 ## Sample document
 
-The included PDF is API documentation used as a stand-in company knowledge base. After ingest it produces **14 chunks**. Ask questions that are actually in that document (for example, how the API generates text from a prompt) to see cited RAG answers; questions outside the file should yield “I don’t know based on the provided document.”
+The included PDF is API documentation used as a sample knowledge base. After ingest it produces **14 chunks**. Ask questions that are actually in that document (for example, how the API generates text from a prompt) to see cited RAG answers; questions outside the file should yield “I don’t know based on the provided document.”
 
 ---
 
